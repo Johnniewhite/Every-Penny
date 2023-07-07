@@ -1,0 +1,22 @@
+{
+  "name": "every-penny",
+  "version": "1.0.0",
+  "description": "Every Penny is a money tracking system that allows users log their daily expenses and in return sorts that data.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Johnniewhite/Every-Penny.git"
+  },
+  "author": "Johnniewhite",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Johnniewhite/Every-Penny/issues"
+  },
+  "homepage": "https://github.com/Johnniewhite/Every-Penny#readme",
+  "dependencies": {
+    "firebase": "^10.0.0"
+  }
+}

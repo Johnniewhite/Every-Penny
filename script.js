@@ -100,6 +100,8 @@ const user = userCredential.user;
 // ...
 
 window.alert("Success! Account created.");
+// const Name = window.prompt("What is your Full Name?")
+window.location.replace("./dashboard.html")
 
 })
 
@@ -144,6 +146,8 @@ const user = userCredential.user;
 console.log("Success! Welcome back!");
 
 window.alert("Success! Welcome back!");
+
+window.location.replace("./dashboard.html")
 
 // ...
 

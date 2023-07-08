@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poppins')
   
 
 * {
@@ -110,14 +109,19 @@ margin-left: 30vw;
 
 /* vertical align */
 
-height: 70vh;
+height: auto;
 
 margin-top: 15vh;
 
+@media screen and (max-width: 600px) {
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+
 }
 
-  
-
+}
 #submit, #create-acct-btn {
 
 background-color: #0583D2;
@@ -145,14 +149,8 @@ transition: 0.3s;
   
 
 #sign-up {
-    background-color: #D9D9D9;
-    
-    color: black;
-    
-    border: none;
-    
-    margin-top: 5%;
-    
+
+border: none;
 
 }
 
@@ -166,181 +164,7 @@ display: none;
 
   
 
-#return-btn {@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-
-
-    /* font-family: "Fredoka One", cursive;
-    
-    color: #0583D2; */
-      
-    
-    * {
-    
-    box-sizing: border-box;
-    
-    margin: 0;
-    
-    padding: 0;
-    
-    font-family: sans-serif;
-    
-    }
-    
-      
-    
-    body {
-        font-family: "Fredoka One", cursive;
-    background-color: #0583D2;
-    
-    }
-    
-    
-    .login-container {
-        
-        background: white;
-        align-items: center;
-        justify-content: center;
-        padding:6rem 10rem;
-        margin:15vh 30vw ;
-    }
-    
-    #main {
-        justify-content: center;
-        align-items: center;
-    }
-    
-    #main > h1 {
-        padding: 1rem;
-        text-align: center;
-        justify-content: center;
-        justify-self: center;
-    }
-    
-    #main > input{
-        
-        width: 100%;
-        padding: .8rem;
-        font-size: 1rem;
-        border-radius: 5px;
-        margin: 1rem 0;
-    }
-    
-    
-    #main > #submit {
-        padding: .8rem 1.5rem;
-        border: 1px solid white;
-        font-weight: 600;
-        background: #0583D2;
-        border-radius: 5px;
-        font-size: 1rem;
-        width: 100%;
-        justify-self: center;
-        
-        
-    
-    }
-    
-    #main > p {
-        font-size: 1.5rem;
-        text-align: center;
-        margin: 1rem 0;
-        padding:0.8 1rem;
-        width: fit-content;
-        border: 1px solid black;
-        background:gray ;
-        margin:1rem auto;
-        
-    }
-    
-    #main > #sign-up {
-        font-size:1rem ;
-        padding: .8rem 1.5rem;
-        border: 1px solid black;
-        font-weight: 600;
-        background: rgb(49, 117, 49);
-        border-radius: 5px;
-        color: white;
-        width: 100%;
-    }
-    
-    
-    #submit, #create-acct-btn {
-    
-    background-color: #0583D2;
-    
-    color: white;
-    
-    border: none;
-    
-    margin-top: 5%;
-    
-    }
-    
-      
-    
-    button:hover {
-    
-    cursor: pointer;
-    
-    opacity: 0.8;
-    
-    transition: 0.3s;
-    
-    }
-    
-      
-    
-    #sign-up {
-    
-    border: none;
-    
-    }
-    
-      
-    
-    #create-acct {
-    
-    display: none;
-    
-    }
-    
-      
-    
-    #return-btn {
-    
-    background: none;
-    
-    color: grey;
-    
-    text-decoration: underline;
-    
-    border: none;
-    
-    margin-top: 3%;
-    
-    }
-    
-    
-    @media screen and (max-width:1600px) {
-    .login-container {
-        
-        
-        padding:3.5rem 6.5rem;
-        margin:10vh 20vw ;
-    }
-    
-    }
-    
-    @media screen and (max-width:900px) {
-    
-        .login-container {
-        
-            
-            padding:2rem 5rem;
-            margin:7vh 15vw ;
-        }
-        
-    }
+#return-btn {
 
 background: none;
 

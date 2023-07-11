@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +8,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: cursive;
 }
 
 a {
@@ -18,46 +19,35 @@ li {
   list-style: none;
 }
 
-/* ---------------------------------------------------------- */
-
-
-/* I will be sectioning this code to make debugging and reading through a lot easier for myself and anybody that stumbles on this project */
-
-
-
-/* ---------------------------------------------------------- */
-
-
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
   background-color: #fff;
+  color: #729343;
+  border: #729343;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-links a {
   color: black;
-
+  font-family: 'Poppins', sans-serif;
+  font-size: 12;
+  font-weight: 500;
 }
 
-.nav-links a  {
-  font-size: 12px;
-  font-weight: 200;
-  color: black;
-}
-
-.nav-links a:hover {
-  color: white
-}
-
-
+/* LOGO */
 .logo {
-  height: 50px;
+  font-size: 32px;
 }
 
+/* NAVBAR MENU */
 .menu {
   display: flex;
   gap: 1em;
   font-size: 18px;
-  float: right;
 }
 
 .menu li:hover {
@@ -67,61 +57,27 @@ li {
 }
 
 .menu li {
-  padding: 5px 10px;
+  padding: 5px 14px;
 }
-
-/* --------------------------------------------- */
 
 
 input[type=checkbox] {
   display: none;
-}
+} 
 
+/* HAMBURGER MENU */
 .hamburger {
   display: none;
   font-size: 24px;
   user-select: none;
 }
 
-
-@media (max-width: 576px) {
-  .menu {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    right: 0;
-    left: 0;
-    text-align: center;
-    padding: 16px 0;
-  }
-
-  .menu li:hover {
-    display: inline-block;
-    background-color: #729343;
-    transition: 0.3s ease;
-  }
-
-  .menu li + li {
-    margin-top: 12px;
-  }
-
-  input[type=checkbox]:checked ~ .menu {
-    display: block;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
-
-
-/* ---------------------------------------------------------- */
-
+/* APPLYING MEDIA QUERIES */
 @media (max-width: 768px) {
-  .menu {
-    display: none;
+ .menu {
+    display:none;
     position: absolute;
-    background-color: #fff;
+    background-color:teal;
     right: 0;
     left: 0;
     text-align: center;
@@ -130,7 +86,7 @@ input[type=checkbox] {
 
   .menu li:hover {
     display: inline-block;
-    background-color: #729343;
+    background-color:#4c9e9e;
     transition: 0.3s ease;
   }
 

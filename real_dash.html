@@ -1,30 +1,38 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
-    <link href="./other.css" rel="stylesheet" />
-    <link rel="icon" type="image//x-icon" href="/images/logoIcon.ico" />
-    <title>Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="other.css" />
+  <title>Document</title>
 </head>
 
 <body>
-    <nav>
-    <div>
-            <img class="logo" src="./images/logoIcon.ico" alt="site-icon">
-            </div>
-            <ul class="nav-links">
-                <input type="checkbox" id="checkbox_toggle" />
-                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+  <nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo"><img src="./images/logo-no-background.png" height="60px" alt="site logo"></div>
 
-                <div class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#chat"><img src="./images/chat-icon.svg" alt="chat icon"></a></li>
-                <li><a class="active" href="#profile">Profile</a></li>
-            </div>
-`        </nav>
-    
-</header>
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+
+      <!-- USING CHECKBOX HACK -->
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+      <!-- NAVIGATION MENUS -->
+      <div class="menu">
+
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Analytics</a></li>
+
+
+
+        <li><a href="/"><img src="images/chat-icon.svg" height="30px" width="30px" alt="chat-icon"></a></li>
+        <li><a href="/">Contact</a></li>
+      </div>
+    </ul>
+  </nav>
 </body>
 
 </html>

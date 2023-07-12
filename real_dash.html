@@ -35,11 +35,40 @@
   </nav>
 
 
-
-  <div id="addEntrySection">
-    <div>
-    <h2 style='text-align:center;'>Add A New Entry</h2>
+  <div id="part2">
+    <div id="addEntrySection">
+      <div>
+      <h2 style='text-align:center;'>Add A New Entry</h2>
+    </div>
+    <div id="inputFields">
+      <div id="divForTitle">
+    <label for="title">Title</label>
+    <input type="text" id="title" placeholder="What did you buy?">
   </div>
+    <br>
+    <div id="divForDescription">
+    <label for="description">Description</label>
+    <input type="text" id="description" placeholder="Talk about your Purchase">
+  </div>
+    <br>
+  <div id="divForPrice">
+    <label for="price">Price (&#8358;)</label>
+    <input type="number" id="price" placeholder="0.00">
+    </div>
+  <br>
+    <label for="forWho">For</label>
+    <select id="dropdown">
+    <option value="Me">Me</option>
+    <option value="Someone Else">Someone Else</option>
+    </select>
+   <br> 
+    <button id="addButton">Add</button>
+  </div>
+    </div>
+  </div>
+  
+  
+  
 
   
   </div>

@@ -1,43 +1,67 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-import { getDatabase } from "firebase/database";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
 
   
 
 const firebaseConfig = {
-    apiKey: "AIzaSyA2uKnF_QW7c8b5I8fdX1zzcKGVn-Lo6yc",
-    authDomain: "everypenny-a7b43.firebaseapp.com",
-    projectId: "everypenny-a7b43",
-    storageBucket: "everypenny-a7b43.appspot.com",
-    messagingSenderId: "1042032186383",
-    appId: "1:1042032186383:web:2cde7e360465e0e63cff7a",
-    measurementId: "G-93X267ZXWS",
-    databaseURL: "https://everypenny-a7b43-default-rtdb.firebaseio.com"
+
+apiKey: "AIzaSyA2uKnF_QW7c8b5I8fdX1zzcKGVn-Lo6yc",
+
+authDomain: "everypenny-a7b43.firebaseapp.com",
+
+projectId: "everypenny-a7b43",
+
+storageBucket: "everypenny-a7b43.appspot.com",
+
+messagingSenderId: "1042032186383",
+
+appId: "1:1042032186383:web:2cde7e360465e0e63cff7a",
+
+measurementId: "G-93X267ZXWS"
+
 };
 
   
 
 const app = initializeApp(firebaseConfig);
+
 const analytics = getAnalytics(app);
+
 const auth = getAuth(app);
-const database = getDatabase(app);
+
   
   
 
 const submitButton = document.getElementById("submit");
+
 const signupButton = document.getElementById("sign-up");
+
 const emailInput = document.getElementById("email");
+
 const passwordInput = document.getElementById("password");
+
 const main = document.getElementById("main");
+
 const createacct = document.getElementById("create-acct")
-  
-const signupEmailIn = document.getElementById("email-signup");
-const signupPasswordIn = document.getElementById("password-signup");
-const createacctbtn = document.getElementById("create-acct-btn");
-const returnBtn = document.getElementById("return-btn");
 
   
+
+const signupEmailIn = document.getElementById("email-signup");
+
+  
+
+const signupPasswordIn = document.getElementById("password-signup");
+
+  
+
+const createacctbtn = document.getElementById("create-acct-btn");
+
+  
+
+const returnBtn = document.getElementById("return-btn");
+
+const logoutButton = document.getElementById("logoutBtn");
 
 var email, password, signupEmail, signupPassword, confirmSignupEmail, confirmSignUpPassword;
 
@@ -74,7 +98,7 @@ const user = userCredential.user;
 // ...
 
 window.alert("Success! Account created.");
-const name = window.prompt("What is your Full Name?")
+// const Name = window.prompt("What is your Full Name?")
 window.location.replace("./dashboard.html")
 
 })
@@ -121,10 +145,13 @@ console.log("Success! Welcome back!");
 
 window.alert("Success! Welcome back!");
 
+localStorage.setItem('email', email);
+
 window.location.replace("./dashboard.html")
 
 // ...
-
+const storerEmail = localStorage.setItem('email', email)
+console.log(storerEmail)
 })
 
 .catch((error) => {
@@ -162,14 +189,5 @@ createacct.style.display = "none";
 });
 
 
-function writeUserData (userId, name, email, imageUrl) {
-    database.ref('users/' + userId).set({
-      username: name,
-      email: email,
-    //   profile_picture : imageUrl
-    });
-}
 
 
-const db = getDatabase();
-const starCountRef = ref(db, '')

@@ -79,7 +79,7 @@ input[type=checkbox] {
 }
 
 #addEntrySection {
-  
+  padding-top: 2px;
   justify-content: center;
   width: 700px;
   height: 300px;

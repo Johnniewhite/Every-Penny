@@ -4,7 +4,8 @@
   "description": "Every Penny is a money tracking system that allows users log their daily expenses and in return sorts that data.",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
   "dependencies": {
     "firebase": "^10.0.0",
     "localstorage": "^1.0.1"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
   }
 }

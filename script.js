@@ -222,6 +222,7 @@ function saveFormDataToDatabase() {
     .then(() => {
       // Data saved successfully
       console.log('Form data saved to database!');
+      window.alert("Expense Added")
       
       // Clear the form inputs after saving
       titleOfItem.value = '';
@@ -232,6 +233,7 @@ function saveFormDataToDatabase() {
     .catch((error) => {
       // An error occurred while saving the data
       console.error('Error saving form data:', error);
+      window.alert("I could not add your expense oo")
     });
   }
   

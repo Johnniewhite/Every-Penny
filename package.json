@@ -18,10 +18,7 @@
   },
   "homepage": "https://github.com/Johnniewhite/Every-Penny#readme",
   "dependencies": {
-    "firebase": "^10.0.0",
-    "localstorage": "^1.0.1"
-  },
-  "devDependencies": {
+    "firebase": "^8.6.8",
     "lite-server": "^2.6.1"
   }
 }

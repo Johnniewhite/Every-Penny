@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
-import { getDatabase, ref, set, onValue } from "firebase/database";
+
   
 
 const firebaseConfig = {
@@ -18,9 +18,7 @@ messagingSenderId: "1042032186383",
 
 appId: "1:1042032186383:web:2cde7e360465e0e63cff7a",
 
-measurementId: "G-93X267ZXWS",
-
-databaseURL: "https://everypenny-a7b43-default-rtdb.firebaseio.com/"
+measurementId: "G-93X267ZXWS"
 
 };
 
@@ -32,39 +30,53 @@ const analytics = getAnalytics(app);
 
 const auth = getAuth(app);
 
-const database = getDatabase(app);
-
   
   
 
 const submitButton = document.getElementById("submit");
+
 const signupButton = document.getElementById("sign-up");
+
 const emailInput = document.getElementById("email");
+
 const passwordInput = document.getElementById("password");
+
 const main = document.getElementById("main");
-const createacct = document.getElementById("create-acct");
+
+const createacct = document.getElementById("create-acct")
+
+  
 
 const signupEmailIn = document.getElementById("email-signup");
+
+  
+
 const signupPasswordIn = document.getElementById("password-signup");
 
+  
+
 const createacctbtn = document.getElementById("create-acct-btn");
+
+  
+
 const returnBtn = document.getElementById("return-btn");
 
-var email, password, signupEmail, signupPassword;
+const logoutButton = document.getElementById("logoutBtn");
 
-//   The form Collection
-const titleOfItem = document.getElementById("title");
-const descriptionOfItem = document.getElementById("description")
-const priceOfItem = document.getElementById("price");
-const forWhoItem = document.getElementById("dropdown")
-const addItem = document.getElementById("addButton")
+var email, password, signupEmail, signupPassword, confirmSignupEmail, confirmSignUpPassword;
 
-// 
+  
 
 createacctbtn.addEventListener("click", function() {
-    var isVerified = true;
-    signupEmail = signupEmailIn.value;
-    signupPassword = signupPasswordIn.value;cvxw
+
+var isVerified = true;
+
+  
+
+signupEmail = signupEmailIn.value;
+
+signupPassword = signupPasswordIn.value;
+
 if(signupEmail == null || signupPassword == null) {
 
 window.alert("Please fill out all required fields.");
@@ -178,41 +190,3 @@ createacct.style.display = "none";
 
 
 
-// adding the form entry to the database
-
-
-function saveFormDataToDatabase() {
-    const title = titleOfItem.value;
-    const description = descriptionOfItem.value;
-    const price = priceOfItem.value;
-    const forWho = forWhoItem.value;
-    
-    // Create a new reference to a child node in the database
-    const newItemRef = ref(database, 'items').push();
-    
-    // Set the data for the new item
-    set(newItemRef, {
-      title: title,
-      description: description,
-      price: price,
-      forWho: forWho
-    })
-    .then(() => {
-      // Data saved successfully
-      console.log('Form data saved to database!');
-      
-      // Clear the form inputs after saving
-      titleOfItem.value = '';
-      descriptionOfItem.value = '';
-      priceOfItem.value = '';
-      forWhoItem.value = 'Me';
-    })
-    .catch((error) => {
-      // An error occurred while saving the data
-      console.error('Error saving form data:', error);
-    });
-  }
-  
-  // Add an event listener to the "Add" button
-  addItem.addEventListener('click', saveFormDataToDatabase);
-  

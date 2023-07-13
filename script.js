@@ -74,6 +74,36 @@ const forWhoItem = document.getElementById("dropdown");
 const addButton = document.getElementById("addButton");
 
 
+addButton.addEventListener("click", saveFormDataToDatabase);
+
+function saveFormDataToDatabase() {
+  const title = titleOfItem.value;
+  const description = descriptionOfItem.value;
+  const price = priceOfItem.value;
+  const forWho = forWhoItem.value;
+
+  const newItemRef = ref(database, 'items').push();
+
+  set(newItemRef, {
+    title: title,
+    description: description,
+    price: price,
+    forWho: forWho
+  })
+    .then(() => {
+      console.log('Form data saved to database!');
+      window.alert("Expense Added");
+
+      titleOfItem.value = '';
+      descriptionOfItem.value = '';
+      priceOfItem.value = '';
+      forWhoItem.value = 'Me';
+    })
+    .catch((error) => {
+      console.error('Error saving form data:', error);
+      window.alert("Failed to add expense");
+    });
+}
 
 var email, password, signupEmail, signupPassword, confirmSignupEmail, confirmSignUpPassword;
 
@@ -201,34 +231,3 @@ createacct.style.display = "none";
 });
 
 // SAVING THE ENTRY INTO THE DATABASE
-
-addButton.addEventListener("click", saveFormDataToDatabase);
-
-function saveFormDataToDatabase() {
-  const title = titleOfItem.value;
-  const description = descriptionOfItem.value;
-  const price = priceOfItem.value;
-  const forWho = forWhoItem.value;
-
-  const newItemRef = ref(database, 'items').push();
-
-  set(newItemRef, {
-    title: title,
-    description: description,
-    price: price,
-    forWho: forWho
-  })
-    .then(() => {
-      console.log('Form data saved to database!');
-      window.alert("Expense Added");
-
-      titleOfItem.value = '';
-      descriptionOfItem.value = '';
-      priceOfItem.value = '';
-      forWhoItem.value = 'Me';
-    })
-    .catch((error) => {
-      console.error('Error saving form data:', error);
-      window.alert("Failed to add expense");
-    });
-}
